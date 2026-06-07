@@ -12,24 +12,24 @@ This project focuses on the design and implementation of a custom Convolutional 
 
 **Approach**
 
-1. Data loading and Preprocessing 
-- CiFake dataset has been downloaded from kaggle and data directory has been loaded using tensor flow data pipeline
-- Images were verified for curruption and valid extensions
-- Data was devided into train, validation and test sets
-- Images in the train dataset were augmented using random rotation, random flip and brightness variations to
-- improve model robustness and avoid model overfitting.
-- Data was cached and pre-fetched mor model optimization.
+1. Data Loading and Preprocessing 
+- CiFAKE dataset has been downloaded from Kaggle and the data directory has been loaded using TensorFlow data pipeline
+- Images were verified for corruption and valid extensions
+- Data was divided into train, validation, and test sets
+- Images in the train dataset were augmented using random rotation, random flip, and brightness variations to
+- Improve model robustness and avoid model overfitting.
+- Data was cached and pre-fetched for model optimization.
 
 2. Baseline CNN model
    - Designed and fitted a baseline CNN with three blocks of convolution layers.
-   - Global average pooling and 0.5 dropout is applied for model rebustness and reliability.
+   - Global average pooling and 0.5 dropout are applied for model robustness and reliability.
 
 4. Transfer learning - Model ResNet
-   - loaded pre-trained model ResNet trained on vast imagenet dataset
-   - Initial layers were prozen and fined tuned the final layer for CiFAKE data.
+   - loaded pre-trained model ResNet trained on the vast Imagenet dataset
+   - Initial layers were frozen, and the final layer was fine-tuned for CiFAKE data.
 
 5. Explainable AI with Grad-CAM
-   - In the final step Grad-CAM is used to may and analyze the pixels that influence the model's decision the most.
+   - In the final step, Grad-CAM is used to map and analyze the pixels that influence the model's decision the most.
 
 **Results**
 Performance on test set:
